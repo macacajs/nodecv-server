@@ -1,0 +1,7 @@
+.git
+logs
+node_modules
+opencv-*
+build
+upload
+coverage

@@ -1,0 +1,12 @@
+coverage.html
+lib-cov/
+node_modules
+.travis.yml
+examples
+Makefile
+.jshintrc
+.jshintignore
+coverage
+*.sw*
+*.un~
+upload

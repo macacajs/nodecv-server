@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>nodecv demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+  <h2 style="text-align: center;">NodeCV Demo</h2>
+  <div id="tabs">
+    <ul>
+      <li><a href="#dissimilarity">Image Dissimilarity</a></li>
+      <li><a href="#matchtemplate">Match Template</a></li>
+      <li><a href="#cascadedetect">Cascade Detect</a></li>
+    </ul>
+    <div id="dissimilarity">
+      <form name="form" class="form">
+        image1: <input title="please select an image" type="file" name="image1" />
+        image2: <input title="please select an image" type="file" name="image2" />
+        <button class="ui-button ui-widget ui-corner-all submit">click to get dissimilarity</button>
+        <span class="result">Dissimilarity:<b>nil</b></span>
+      </form>
+      <hr/>
+      <img class="image1" width="300"/>
+      <img class="image2" width="300"/>
+    </div>
+    <div id="matchtemplate">
+      <form name="form" class="form">
+        image: <input title="please select an image" type="file" name="image1" />
+        template: <input title="please select an image" type="file" name="image2" />
+        <button class="ui-button ui-widget ui-corner-all submit">click to match template</button>
+      </form>
+      <hr/>
+      <img class="image1" width="300"/>
+      <img class="image2" width="300"/>
+      <img class="image3" width="300"/>
+    </div>
+    <div id="cascadedetect">
+      <form name="form" class="form">
+        image: <input title="please select an image" type="file" name="image1" />
+        <button class="ui-button ui-widget ui-corner-all submit">click to cascade detect</button>
+      </form>
+      <hr/>
+      <img class="image1" width="300"/>
+      <img class="image2" width="300"/>
+    </div>
+  </div>
+  <div id="dialog" title="Notice">
+    <p>please select image</p>
+  </div>
+  <script src="/init.js"></script>
+</body>
+</html>

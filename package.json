@@ -1,0 +1,47 @@
+{
+  "name": "nodecv-server",
+  "version": "0.1.0",
+  "description": "nodecv server side",
+  "keywords": [
+    "nodecv",
+    "opencv"
+  ],
+  "bin": {
+    "nodecv-server": "./bin/nodecv-server"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/nodecv-server.git"
+  },
+  "dependencies": {
+    "commander": "~2.0.0",
+    "detect-port": "^1.0.4",
+    "koa": "^1.4.0",
+    "koa-bodyparser": "~2.0.1",
+    "koa-cors": "^0.0.16",
+    "koa-router": "~5.4.0",
+    "koa-static": "^2.0.0",
+    "multer": "^0.*",
+    "nodecv": "^0.1.1",
+    "thenify": "^3.1.0",
+    "xlogger": "~1.0.4",
+    "xutil": "~1.0.0"
+  },
+  "devDependencies": {
+    "co-mocha": "*",
+    "mocha": "*",
+    "should": "*",
+    "jshint": "*",
+    "istanbul": "*",
+    "pre-commit": "1.1.1"
+  },
+  "scripts": {
+    "test": "make test",
+    "jshint": "make jshint"
+  },
+  "pre-commit": [
+    "jshint"
+  ],
+  "license": "MIT"
+}

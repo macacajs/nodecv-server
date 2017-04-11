@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const core = require('..');
+const program = require('commander');
+
+const pkg = require('../package.json');
+
+program
+  .option('-p, --port <s>',     'port to use (9900 default)')
+  .option('-v, --versions',     'output version infomation')
+  .usage('[port 8080]');
+
+program.parse(process.argv);
+
+if (program.versions) {
+  console.info('\n  ' + pkg.version + '\n');
+  process.exit(0);
+}
+
+core.server({
+  port: program.port || 9900
+});
