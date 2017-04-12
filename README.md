@@ -14,7 +14,7 @@
 [download-image]: https://img.shields.io/npm/dm/nodecv-server.svg?style=flat-square
 [download-url]: https://npmjs.org/package/nodecv-server
 
-> [nodecv](//github.com/macacajs/nodecv) server side
+> [nodecv](//github.com/xudafeng/nodecv) server side
 
 ## Usage
 
