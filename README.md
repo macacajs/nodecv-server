@@ -25,6 +25,46 @@ $ npm i
 $ make server
 ```
 
+Please visit demo: `http://localhost:9900/opencv/demo`
+
+![](http://wx3.sinaimg.cn/large/6d308bd9gy1fek6oa9i3vj21kw0zrn4y.jpg)
+
+## API
+
+
+```
+POST /opencv/dissimilarity
+```
+
+```
+POST /opencv/matchtemplate
+```
+
+```
+POST /opencv/cascadedetect
+```
+
+Example:
+
+``` javascript
+request.post({
+  url: `${remoteHost}/opencv/dissimilarity`,
+  formData: formData
+}, function(err, httpResponse, body) {
+  if (err) {
+    return console.error('upload failed:', err);
+  }
+  console.log('Server responded with:', body);
+  try {
+    const data = JSON.parse(body);
+    console.log(`Dissimilarity is: ${data.dissimilarity}`);
+  } catch (e) {
+  }
+});
+```
+
+More sample: [macaca-sample](//github.com/macaca-sample)
+
 ## License
 
 The MIT License (MIT)
