@@ -54,6 +54,47 @@ $('#dissimilarity .submit').on('click', function(e) {
   return false;
 });
 
+$('#findpairs [name="image1"]').change(function(e) {
+  var file = e.target.files[0]
+  var url = URL.createObjectURL(file);
+  $('#dissimilarity .image1').attr('src', url);
+});
+
+$('#findpairs [name="image2"]').change(function(e) {
+  var file = e.target.files[0]
+  var url = URL.createObjectURL(file);
+  $('#dissimilarity .image2').attr('src', url);
+});
+
+$('#findpairs .submit').on('click', function(e) {
+  e.preventDefault();
+  if (!$('#dissimilarity .image1').attr('src') || !$('#dissimilarity .image2').attr('src')) {
+    $('#dialog').dialog('open');
+    return false;
+  }
+  var formData = new FormData($('#findpairs .form')[0]);
+  $.ajax({
+    url: '/opencv/findpairs',
+    type: 'POST',
+    data: formData,
+    async: false,
+    cache: false,
+    contentType: false,
+    processData: false,
+    success: function(data) {
+      console.log(data);
+      if (data.match) {
+        $('#findpairs .result b').html(JSON.stringify(data.match));
+      } else {
+        $('#findpairs .result b').html('nil');
+      }
+    },
+    error: function(data) {
+    }
+  });
+  return false;
+});
+
 $('#matchtemplate [name="image1"]').change(function(e) {
   var file = e.target.files[0]
   var url = URL.createObjectURL(file);
