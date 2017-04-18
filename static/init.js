@@ -57,18 +57,18 @@ $('#dissimilarity .submit').on('click', function(e) {
 $('#findpairs [name="image1"]').change(function(e) {
   var file = e.target.files[0]
   var url = URL.createObjectURL(file);
-  $('#dissimilarity .image1').attr('src', url);
+  $('#findpairs .image1').attr('src', url);
 });
 
 $('#findpairs [name="image2"]').change(function(e) {
   var file = e.target.files[0]
   var url = URL.createObjectURL(file);
-  $('#dissimilarity .image2').attr('src', url);
+  $('#findpairs .image2').attr('src', url);
 });
 
 $('#findpairs .submit').on('click', function(e) {
   e.preventDefault();
-  if (!$('#dissimilarity .image1').attr('src') || !$('#dissimilarity .image2').attr('src')) {
+  if (!$('#findpairs .image1').attr('src') || !$('#findpairs .image2').attr('src')) {
     $('#dialog').dialog('open');
     return false;
   }

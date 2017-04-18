@@ -24,7 +24,7 @@
     "koa-router": "~5.4.0",
     "koa-static": "^2.0.0",
     "multer": "^0.*",
-    "nodecv": "^1.0.1",
+    "nodecv": "^1.0.2",
     "thenify": "^3.1.0",
     "xlogger": "~1.0.4",
     "xutil": "~1.0.0"
