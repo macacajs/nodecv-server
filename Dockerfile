@@ -1,4 +1,4 @@
-FROM xudafeng/nodecv
+FROM xudafeng/nodecv:1.0.1
 
 COPY . /nodecv-server
 
