@@ -25,7 +25,7 @@ $ npm i
 $ make server
 ```
 
-Please visit demo: `http://localhost:9900/opencv/demo`
+Please visit demo: `http://localhost:9900/`
 
 ![](http://wx3.sinaimg.cn/large/6d308bd9gy1fek6oa9i3vj21kw0zrn4y.jpg)
 
