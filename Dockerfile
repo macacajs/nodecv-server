@@ -1,4 +1,4 @@
-FROM xudafeng/nodecv
+FROM macacajs/nodecv
 
 COPY . /nodecv-server
 

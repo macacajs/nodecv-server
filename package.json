@@ -1,6 +1,6 @@
 {
   "name": "nodecv-server",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "nodecv server side",
   "keywords": [
     "nodecv",
@@ -37,7 +37,7 @@
     "should": "*",
     "jshint": "*",
     "istanbul": "*",
-    "pre-commit": "1.1.1"
+    "pre-commit": "*"
   },
   "scripts": {
     "test": "make test",
