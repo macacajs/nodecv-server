@@ -18,7 +18,7 @@
 
 ## Usage
 
-``` bash
+```bash
 $ git clone git@github.com:macacajs/nodecv-server.git --depth=1
 $ cd nodecv-server
 $ npm i
@@ -46,7 +46,7 @@ POST /opencv/cascadedetect
 
 Example:
 
-``` javascript
+```javascript
 request.post({
   url: `${remoteHost}/opencv/dissimilarity`,
   formData: formData
