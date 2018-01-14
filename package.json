@@ -34,17 +34,16 @@
   "devDependencies": {
     "co-mocha": "*",
     "mocha": "*",
-    "should": "*",
     "jshint": "*",
     "istanbul": "*",
     "pre-commit": "*"
   },
   "scripts": {
-    "test": "make test",
-    "jshint": "make jshint"
+    "test": "istanbul cover `npm bin`/_mocha",
+    "lint": "jshint ."
   },
   "pre-commit": [
-    "jshint"
+    "lint"
   ],
   "license": "MIT"
 }
